@@ -36,11 +36,6 @@ public class Datamer_Preloader extends Preloader {
         preloaderControl = control;
 
         return new Scene(mainPane);
-
-//        bar = new ProgressBar();
-//        BorderPane p = new BorderPane();
-//        p.setCenter(bar);
-//        return new Scene(p, 300, 150);        
     }
 
     @Override
