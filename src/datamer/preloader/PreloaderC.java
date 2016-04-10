@@ -14,23 +14,30 @@ import javafx.scene.image.ImageView;
  * @author Agarimo
  */
 public class PreloaderC implements Initializable {
-    
+
     @FXML
     public ProgressBar bar;
-    
+
     @FXML
     public ImageView image;
 
+    @FXML
+    public ImageView background;
+
     /**
      * Initializes the controller class.
+     *
      * @param url
      * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-       Image img = new Image(getClass().getResourceAsStream("DeathStar.png")); 
-       image.setImage(img);
-    }    
-    
+        Image back = new Image(getClass().getResourceAsStream("Background.jpg"));
+        background.setImage(back);
+        
+        Image img = new Image(getClass().getResourceAsStream("DeathStar.png"));
+        image.setImage(img);
+    }
+
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.paint.*?>
@@ -15,47 +16,53 @@
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="200.0" stroke="BLACK" strokeType="INSIDE" width="387.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <fill>
-                  <LinearGradient endX="1.0">
-                     <stops>
-                        <Stop color="#ffffff00" />
-                        <Stop color="#000000cf" offset="0.23403246830193133" />
-                        <Stop color="BLACK" offset="0.4565311845795315" />
-                        <Stop color="#000000d0" offset="0.7675474977287985" />
-                        <Stop color="#ffffff00" offset="1.0" />
-                     </stops>
-                  </LinearGradient>
-               </fill></Rectangle>
+            <ImageView fx:id="background" fitHeight="200.0" fitWidth="387.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
          </children>
       </AnchorPane>
       <VBox prefHeight="200.0" prefWidth="100.0">
          <children>
-            <ImageView fx:id="image" fitHeight="122.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="image" fitHeight="140.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
                <VBox.margin>
-                  <Insets left="40.0" top="20.0" />
+                  <Insets left="20.0" top="20.0" />
                </VBox.margin>
             </ImageView>
          </children>
       </VBox>
       <AnchorPane>
          <children>
-            <Text layoutX="138.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATAFEST" wrappingWidth="234.39999389648438">
+            <Text fontSmoothingType="LCD" layoutX="138.0" layoutY="49.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="DATAFEST" textAlignment="CENTER" wrappingWidth="234.39999389648438" AnchorPane.topAnchor="20.0">
                <font>
-                  <Font name="Elephant" size="36.0" />
+                  <Font name="Impact" size="48.0" />
                </font>
+               <effect>
+                  <Bloom>
+                     <input>
+                        <Lighting bumpInput="$null">
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Bloom>
+               </effect>
                <fill>
                   <LinearGradient endX="0.5857142857142856" endY="0.6142857142857143">
                      <stops>
-                        <Stop color="#202fd6" />
-                        <Stop color="#202fd6" offset="0.4780582217482324" />
-                        <Stop color="#f80606" offset="1.0" />
+                        <Stop color="#727519" />
+                        <Stop color="#959731" offset="0.7117746968440177" />
+                        <Stop color="#f7f107" offset="1.0" />
                      </stops>
                   </LinearGradient>
                </fill>
             </Text>
-            <ProgressBar fx:id="bar" layoutY="168.0" prefHeight="18.0" prefWidth="387.0" progress="0.0" visible="false" />
-            <Text fill="WHITE" layoutX="251.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El festival de los datos!" />
+            <ProgressBar fx:id="bar" layoutY="168.0" maxHeight="-Infinity" minHeight="-Infinity" opacity="0.0" prefHeight="10.0" prefWidth="383.0" style="-fx-accent: yellow; -fx-background-color: black;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Text fill="WHITE" layoutX="216.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El festival de los datos!" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="75.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect></Text>
          </children>
       </AnchorPane>
    </children>
