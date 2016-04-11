@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<StackPane prefHeight="200.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="datamer.preloader.PreloaderC">
+<StackPane prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="datamer.preloader.PreloaderC">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -35,11 +37,10 @@
                   <Font name="Impact" size="48.0" />
                </font>
                <effect>
-                  <Bloom>
+                  <Bloom threshold="0.0">
                      <input>
                         <Lighting bumpInput="$null">
                            <light>
-                              <Light.Distant />
                            </light>
                         </Lighting>
                      </input>
@@ -55,14 +56,22 @@
                   </LinearGradient>
                </fill>
             </Text>
-            <ProgressBar fx:id="bar" layoutY="168.0" maxHeight="-Infinity" minHeight="-Infinity" opacity="0.0" prefHeight="10.0" prefWidth="383.0" style="-fx-accent: yellow; -fx-background-color: black;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <ProgressBar fx:id="bar" focusTraversable="false" layoutY="168.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="10.0" prefWidth="383.0" style="-fx-accent: purple; -fx-text-box-border: transparent; -fx-control-inner-background: transparent; -fx-box-border: transparent; -fx-indeterminate-bar-length: 100;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="-5.0" />
             <Text fill="WHITE" layoutX="216.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El festival de los datos!" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="75.0">
                <font>
                   <Font size="14.0" />
                </font>
                <effect>
-                  <Bloom />
+                  <Bloom threshold="0.0" />
                </effect></Text>
+            <Text fill="#ff9705" layoutX="347.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.1" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="56.0">
+               <font>
+                  <Font name="Impact" size="12.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect>
+            </Text>
          </children>
       </AnchorPane>
    </children>

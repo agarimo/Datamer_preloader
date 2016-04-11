@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package datamer.preloader;
 
 import java.io.IOException;
@@ -10,10 +5,9 @@ import javafx.application.Preloader;
 import javafx.application.Preloader.ProgressNotification;
 import javafx.application.Preloader.StateChangeNotification;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -26,7 +20,7 @@ import javafx.stage.StageStyle;
 public class Datamer_Preloader extends Preloader {
 
     PreloaderC preloaderControl;
-//    ProgressBar bar;
+    ProgressBar bar;
     Stage stage;
 
     private Scene createPreloaderScene() throws IOException {
@@ -42,6 +36,11 @@ public class Datamer_Preloader extends Preloader {
     public void start(Stage stage) throws Exception {
         this.stage = stage;
         stage.initStyle(StageStyle.UNDECORATED);
+        
+        Image icon = new Image(getClass().getResourceAsStream("DeathStar.png"));
+        this.stage.getIcons().add(icon);
+        this.stage.setTitle("DataFest 1.1");
+        
         stage.setScene(createPreloaderScene());
         stage.show();
     }
@@ -55,7 +54,7 @@ public class Datamer_Preloader extends Preloader {
 
     @Override
     public void handleProgressNotification(ProgressNotification pn) {
-        preloaderControl.bar.setProgress(pn.getProgress());
+        preloaderControl.bar.setProgress(-1.0);
     }
 
 }
