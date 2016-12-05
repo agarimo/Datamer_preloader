@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -23,6 +24,9 @@ public class PreloaderC implements Initializable {
 
     @FXML
     public ImageView background;
+    
+    @FXML
+    private Text lbVersion;
 
     /**
      * Initializes the controller class.
@@ -32,7 +36,8 @@ public class PreloaderC implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        lbVersion.setText("1.4");
+        
         Image back = new Image(getClass().getResourceAsStream("Background.jpg"));
         background.setImage(back);
         

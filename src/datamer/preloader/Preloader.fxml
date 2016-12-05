@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="datamer.preloader.PreloaderC">
+<StackPane prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="datamer.preloader.PreloaderC">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -64,7 +64,7 @@
                <effect>
                   <Bloom threshold="0.0" />
                </effect></Text>
-            <Text fill="#ff9705" layoutX="347.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.3" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="56.0">
+            <Text fx:id="lbVersion" fill="#ff9705" layoutX="347.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.3" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="56.0">
                <font>
                   <Font name="Impact" size="12.0" />
                </font>
