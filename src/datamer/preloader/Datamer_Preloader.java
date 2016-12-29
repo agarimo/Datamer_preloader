@@ -39,7 +39,7 @@ public class Datamer_Preloader extends Preloader {
         
         Image icon = new Image(getClass().getResourceAsStream("DeathStar.png"));
         this.stage.getIcons().add(icon);
-        this.stage.setTitle("DataFest 1.3.3");
+        this.stage.setTitle("DATAFEST");
         
         stage.setScene(createPreloaderScene());
         stage.show();
